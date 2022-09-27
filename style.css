@@ -1,0 +1,702 @@
+@font-face{
+    src: url("./fonts/Hello Paris Sans ExtraLight.ttf");
+    font-family: "Hello Paris";
+}
+
+@font-face{
+    src: url("./fonts/Bigilla.otf");
+    font-family: "Bigilla";
+    font-weight: 100;
+}
+
+@font-face{
+    src: url("./fonts/Bigilla-Bold.otf");
+    font-family: "Bigilla";
+    font-weight:600;
+}
+
+@font-face{
+    src: url("./fonts/Gilroy-Bold.otf");
+    font-family: "Gilroy";
+}
+
+@font-face{
+    src: url("./fonts/Helvetica.ttf");
+    font-family: "Helvetica";
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body::-webkit-scrollbar{
+    display:none
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#fullscreennav{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    z-index: 999999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 31, 27);
+}
+
+#fullscreennav a{
+    margin-bottom: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Bigilla";
+    font-size: 10vw;
+}
+
+#fullscreennav i{
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 8vw;
+    opacity: .7;
+}
+
+#home{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(36, 54, 47);
+}
+
+#controller{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#circle{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-image: url(https://media.istockphoto.com/photos/red-grunge-background-picture-id1160959166?b=1&k=20&m=1160959166&s=170667a&w=0&h=CQgW_AML6xPjgo4yv8kwM_G6pytRe1EGk_7t6Qp2LSQ=);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Hello Paris";
+    font-weight: 50;
+    line-height: 8vw;
+    color: rgb(255, 209, 196);
+    font-size: 10vw;
+}
+
+#text h1 span{
+    display: inline-block;
+    letter-spacing: 5px;
+}
+
+#nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    /* background-color: red; */
+    padding: 1vw 12vw;
+}
+
+.navpart a{
+    display: inline-block;
+}
+
+#nav i{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #fff;
+}
+
+#nleft a{
+    font-family: "Bigilla";
+    margin-right: 20px;
+    color: rgb(252, 140, 100);
+}
+
+
+
+#minicircle{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+}
+
+#nright a{
+    color: rgb(252, 140, 100);
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: "Bigilla";
+}
+
+#ncenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ncenter h2{
+    font-family: "Bigilla";
+    font-weight: 900;
+    color: rgb(252, 140, 100);
+    font-size: 2.5vw;
+}
+
+#hbottom{
+    width: 40%;
+    height: 16%;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hbtmpart{
+    text-align: center;
+    /* cursor: none; */
+  
+}
+
+.hbtmpart h4{
+    font-family: "Bigilla";
+    font-size: 3vw;
+    line-height: 1vw;
+    color: orangered;
+  
+}
+
+.hbtmpart h2{
+    font-family: "Bigilla";
+    text-decoration: underline;
+    color: rgb(252, 140, 100);
+    font-size: 1vw;
+  
+
+}
+ 
+
+#circleline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    /* cursor: none; */
+    border: 1px solid rgb(82, 82, 82);
+}
+
+#rightsmcircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    border: 1px solid red;
+    color:rgb(254, 173, 150);
+    font-family: "Bigilla";
+    font-weight: 900;
+}
+
+
+#second{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(20, 31, 27);
+}
+
+#photoseries{
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    gap: 50px;
+}
+
+#photoseries .photo{
+    width: 25vw;
+    height: 37vw;
+    flex-shrink: 0;
+    object-fit: cover;
+    background-color: rebeccapurple;
+}
+.photo {
+   object-fit: contain;
+   overflow: hidden;
+}
+
+#photoseries::-webkit-scrollbar{
+    display: none;
+}
+
+#second h1{
+    left: 0;
+    position: absolute;
+    z-index: 9999;
+    font-size: 4vw;
+    font-family: "Bigilla";
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+#third{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    background-color: #dadada;
+}
+
+.stripe{
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    width: 4%;
+    height: 100%;
+    background-color: rgb(223, 90, 90);
+}
+
+.strcnt{
+    pointer-events: none;
+    opacity: 0;
+    width: 60%;
+    position: absolute;
+    /* display: flex; */
+    top: 50%;
+    left: 50%;
+    font-family: "Gilroy";
+    transform: translate(-50%, -50%);
+}
+#glr{
+    color: rgb(184, 63, 11);
+    font-size: 5vw ;
+}
+.strcnt h1{
+    font-size: 4vw;
+    line-height: 4vw;
+
+    margin-bottom: 10vh;
+}
+/* .strcnt>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+} */
+
+.strcnt p{
+    font-weight: 600;
+    font-size: 1.2vw;
+    width: 70%;
+    margin-top: 2vw;
+}
+
+
+.stripe:nth-child(2){
+    right: 12%;
+    width: 4%;
+    /* background-image: url(" "); */
+    /* background-repeat: no-repeat; */
+    /* object-fit: contain; */
+    background-color: rgb(226, 149, 71);
+}
+
+.stripe:nth-child(3){
+    right: 8%;
+    background-color: rgb(155, 103, 228);
+}
+
+.stripe:nth-child(4){
+    right: 4%;
+    background-color: rgb(86, 145, 213);
+}
+
+.cors{
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.stripe h4{
+    pointer-events: none;
+    white-space: nowrap;
+    font-family: "Gilroy";
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10%;
+    font-size: 1vw;
+    left: 30px;
+    transform-origin: 0% 50%;
+    transform: rotate(-90deg);
+}
+
+#thleft{
+    position: absolute;
+    padding: 4vw;
+    width: 84%;
+    left: 0;
+    height: 100%;
+    background-color: rgb(209, 209, 209);
+}
+
+#thleft h1{
+    font-size: 5vw;
+}
+
+#thleft :is(h1, p){
+    font-family: "Helvetica";
+    font-weight: 500;
+}
+
+#thleft p{
+    width: 37vw;
+    margin-top: 2vw;
+}
+
+#fourth{
+    position: relative;
+    width: 100%;
+    background-color: rgb(20, 31, 27);
+}
+
+
+#elems{
+    padding: 5vw 5vw;
+}
+
+.elem{
+    position: relative;
+    margin-bottom: 2vw;
+    /* background-color: red; */
+}
+
+.elem img{
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    height: 40vh;
+}
+
+.elem h1{
+    pointer-events: none;
+    width: fit-content;
+    font-family: "Bigilla";
+    color: #fff;
+    font-weight: 900;
+    font-size: 5vw;
+    position: relative;
+    z-index: 99999999999999;
+}
+
+.elem h1:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+@media(max-width: 500px){
+    .navpart{
+        display: none;
+    }
+
+    #ncenter h2{
+        font-size: 8vw;
+    }
+
+    #circle{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    #text h1{
+        font-size: 25vw;
+        line-height: 15vw;
+    }
+
+    #hbottom{
+        width: 90%;
+    }
+
+    .hbtmpart{
+        width: 30%;
+    }
+
+    .hbtmpart h4{
+        font-size: 9vw;
+    }
+
+    .hbtmpart h2{
+        font-size: 3vw;
+    }
+    
+    /* second page responsive code */
+
+    #second h1{
+        font-size: 15vw;
+        animation:  key 5s infinite;
+    }
+
+    #photoseries{
+        padding: 0 50px;
+    }
+
+    #photoseries .photo{
+        width: 70vw;
+        height: 120vw;
+    }
+
+    /* third part code */
+
+    .strcnt>h1>img{
+        width:  60vw;
+        height: 40vw;
+        align-self: center;
+        position: absolute;
+    }
+    #third{
+        transform-origin: -50%,-50%;
+        transform: rotate(90deg);
+        width: 100vw;
+        height: 100vw;
+    }
+
+     #thleft{
+        width: 100%;
+        padding: 6vw;
+        transform-origin: -50%,-50%;
+        transform: rotate(-90deg);
+    } 
+    .strcnt{
+        margin-left: -30vh;
+        /* margin-bottom: -80vh; */
+         object-fit: cover;
+        transform-origin: -50%,-50%;
+        transform: rotate(-90deg);
+    }
+
+   /* #thleft h1{
+        font-size: 12vw;
+         transform-origin: -50%,-50%;
+        transform: rotate(-90deg);
+    }
+
+    #thleft p{
+        width: 100%;
+        font-size: 6vw;
+        margin-top: 10vw;
+        line-height: 7vw;
+    }
+
+   /* .stripe{
+        width: 100%;
+        height: 6%;
+    }
+
+    .stripe:nth-child(2){
+        width: 100%;
+        right: initial;
+        left: 0;
+        bottom: 18%;
+    }
+
+    .stripe:nth-child(3){
+        width: 100%;
+        right: initial;
+        left: 0;
+        bottom: 12%;
+    }
+
+    .stripe:nth-child(4){
+        width: 100%;
+        right: initial;
+        left: 0;
+        bottom: 6%;
+    }
+
+    .stripe:nth-child(5){
+        width: 100%;
+        right: initial;
+        left: 0;
+        bottom: 0%;
+    }
+
+    .stripe h4{
+        bottom: initial;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 3vw;
+        transform-origin: initial;
+    } */
+
+    /* fourth part code */
+
+    #fourth{
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .elem{
+        margin-bottom: 20vw;
+    }
+
+    .elem h1{
+        font-size: 10vw;
+    }
+
+    .elem img{
+        height: 30vh;
+    }
+
+}
+
+
+/* LOADER ANIMATION */
+#loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(36, 54, 47);
+    position: fixed;
+    z-index: 999999999999999999;
+    width: 100%;
+    height: 100vh;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+
+
+
+  @keyframes key{
+    0% {
+        transform: translate(0, 0);
+      }
+      50%{
+        transform: translate(50%, 0);
+      }
+      100% {
+        transform: translate(100%, 0);
+  }
+}
